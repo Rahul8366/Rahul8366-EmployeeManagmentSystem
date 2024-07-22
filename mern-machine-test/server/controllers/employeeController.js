@@ -50,8 +50,8 @@ exports.createEmployee = (req, res) => {
                 courses: Array.isArray(courses) ? courses : [courses] // Ensure courses is an array
             });
             await employee.save();
-            console.log('Employee added successfully');
-            res.json({ msg: 'Employee added successfully' });
+            // res.json({ msg: 'Employee added successfully' });
+            res.json(employee); 
         } catch (err) {
             console.error('Server error:', err);
             res.status(500).send('Server error');

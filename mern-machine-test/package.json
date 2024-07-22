@@ -9,7 +9,7 @@
     "client-build": "npm run build --prefix client",
     "server": "nodemon server/app.js",
     "dev": "concurrently \"npm run client\" \"npm run server\"",
-    "start": "node server/app.js",
+    "start": "npm run dev",
     "heroku-postbuild": "npm run client-install && npm run client-build"
   },
   "dependencies": {
